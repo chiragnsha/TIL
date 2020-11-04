@@ -46,7 +46,9 @@ class ListTableViewController: UITableViewController {
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: ListTableViewController.cellIdentifier)
         
+        /*
         NotificationCenter.default.addObserver(self, selector: #selector(ListTableViewController.showDetailTargetDidChange(_:)), name: NSNotification.Name.UIViewControllerShowDetailTargetDidChange, object: nil)
+ */
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,7 +82,7 @@ class ListTableViewController: UITableViewController {
         }
     }
     
-    func showDetailTargetDidChange(_ notification: Notification) {
+    @objc func showDetailTargetDidChange(_ notification: Notification) {
         /*
             Whenever the target for showDetailViewController: changes, update all
             of our cells (to ensure they have the right accessory type).
@@ -92,13 +94,16 @@ class ListTableViewController: UITableViewController {
         }
     }
     
+    /*
+    
     override func containsPhoto(_ photo: Photo) -> Bool {
         return true
     }
-
+*/
+    
     // MARK: About
 
-    func showAboutViewController(_ sender: UIBarButtonItem) {
+    @objc func showAboutViewController(_ sender: UIBarButtonItem) {
         if presentedViewController != nil {
             // Dismiss Profile if visible
             dismiss(animated: true, completion: nil)
@@ -106,8 +111,11 @@ class ListTableViewController: UITableViewController {
         
         let aboutViewController = AboutViewController()
         aboutViewController.navigationItem.title = NSLocalizedString("About", comment: "About")
+        
+        /*
         aboutViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ListTableViewController.closeAboutViewController(_:)))
-
+*/
+        
         let navController = UINavigationController(rootViewController: aboutViewController)
         navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true, completion: nil)
@@ -119,7 +127,7 @@ class ListTableViewController: UITableViewController {
 
     // MARK: Profile
     
-    func showProfileViewController(_ sender: UIBarButtonItem) {
+    @objc func showProfileViewController(_ sender: UIBarButtonItem) {
         let profileController = ProfileViewController(user: user)
         profileController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ListTableViewController.closeProfileViewController(_:)))
         
@@ -133,7 +141,7 @@ class ListTableViewController: UITableViewController {
         present(profileNavController, animated: true, completion:nil)
     }
 
-    func closeProfileViewController(_ sender: UIBarButtonItem) {
+    @objc func closeProfileViewController(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
 

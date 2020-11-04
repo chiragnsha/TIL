@@ -72,21 +72,21 @@ class ProfileViewController: UIViewController {
         
         // Create a label for the profile name
         let nameLabel = UILabel()
-        nameLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+        nameLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.nameLabel = nameLabel
         view.addSubview(nameLabel)
         
         // Create a label for the number of conversations
         let conversationsLabel = UILabel()
-        conversationsLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        conversationsLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         conversationsLabel.translatesAutoresizingMaskIntoConstraints = false
         self.conversationsLabel = conversationsLabel
         view.addSubview(conversationsLabel)
         
         // Create a label for the number of photos
         let photosLabel = UILabel()
-        photosLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        photosLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         photosLabel.translatesAutoresizingMaskIntoConstraints = false
         self.photosLabel = photosLabel
         view.addSubview(photosLabel)

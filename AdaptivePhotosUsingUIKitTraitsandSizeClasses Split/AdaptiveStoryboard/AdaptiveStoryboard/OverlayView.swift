@@ -53,7 +53,7 @@ class OverlayView: UIView {
         backgroundView.contentView.backgroundColor = UIColor(white: 0.7, alpha: 0.3)
         addSubview(backgroundView)
         
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         addSubview(label)
         
         // Setup constraints.
@@ -94,7 +94,7 @@ class OverlayView: UIView {
     // MARK: Content Size Handling
     
     func contentSizeCategoryDidChange(_ notification: Notification) {
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
 
         invalidateIntrinsicContentSize()
     }

@@ -83,7 +83,7 @@ class PhotoViewController: UIViewController {
         
         // We want these constraints to be able to be broken if our interface is resized to be small enough that these margins don't fit.
         for constraint in optionalConstraints {
-            constraint.priority = UILayoutPriorityRequired - 1
+            constraint.priority = UILayoutPriority.required - 1
         }
         
         NSLayoutConstraint.activate(optionalConstraints)
@@ -95,7 +95,7 @@ class PhotoViewController: UIViewController {
         Action for a change in value from the `RatingControl` (the user choose a
         different rating for the photo).
     */
-    func changeRating(_ sender: RatingControl) {
+    @objc func changeRating(_ sender: RatingControl) {
         photo.rating = sender.rating
     }
     
@@ -108,8 +108,11 @@ class PhotoViewController: UIViewController {
         ratingControl?.rating = photo.rating
     }
     
+    
     // This method is originally declared in the PhotoContents extension on UIViewController.
+    /*
     override func containedPhoto() -> Photo? {
         return photo
     }
+ */
 }

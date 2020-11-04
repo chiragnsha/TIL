@@ -30,15 +30,21 @@ extension UIViewController {
     
     func currentVisibleDetailPhotoWithSender(_ sender: AnyObject?) -> Photo? {
         // Look for a view controller that has a visible photo.
+        
+        /*
         if let target = targetViewController(forAction: #selector(UIViewController.currentVisibleDetailPhotoWithSender(_:)), sender: sender) {
             return target.currentVisibleDetailPhotoWithSender(sender)
         }
         else {
             return nil
         }
+         */
+        
+        return nil
     }
 }
 
+/*
 extension UISplitViewController {
     override func currentVisibleDetailPhotoWithSender(_ sender: AnyObject?) -> Photo? {
         if isCollapsed {
@@ -53,3 +59,4 @@ extension UISplitViewController {
         }
     }
 }
+*/

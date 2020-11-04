@@ -21,14 +21,14 @@ class AboutViewController: UIViewController {
         view.backgroundColor = UIColor.white
 
         let headlineLabel = UILabel()
-        headlineLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+        headlineLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
         headlineLabel.numberOfLines = 1
         headlineLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headlineLabel)
         self.headlineLabel = headlineLabel
 
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         label.numberOfLines = 0
 
         if let url = Bundle.main.url(forResource: "Text", withExtension: "txt") {

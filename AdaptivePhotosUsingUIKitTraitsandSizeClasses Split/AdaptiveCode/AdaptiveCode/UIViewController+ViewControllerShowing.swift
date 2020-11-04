@@ -15,10 +15,13 @@ extension UIViewController {
     */
     func willShowingViewControllerPushWithSender(_ sender: AnyObject?) -> Bool {
         // Find and ask the right view controller about showing.
+        
+        /*
         if let target = targetViewController(forAction: #selector(UIViewController.willShowingViewControllerPushWithSender(_:)), sender: sender) {
             return target.willShowingViewControllerPushWithSender(sender)
         }
-
+*/
+        
         // Or if we can't find one, we won't be pushing.
         return false
     }
@@ -29,22 +32,27 @@ extension UIViewController {
     */
     func willShowingDetailViewControllerPushWithSender(_ sender: AnyObject?) -> Bool {
         // Find and ask the right view controller about showing.
+        /*
         if let target = targetViewController(forAction: #selector(UIViewController.willShowingDetailViewControllerPushWithSender(_:)), sender: sender) {
             return target.willShowingDetailViewControllerPushWithSender(sender)
         }
-
+*/
+        
         // Or if we can't find one, we won't be pushing.
         return false
     }
 }
 
+/*
 extension UINavigationController {
     override func willShowingViewControllerPushWithSender(_ sender: AnyObject?) -> Bool {
         // Navigation Controllers always push for `showViewController(_:sender:)`.
         return true
     }
 }
+*/
 
+/*
 extension UISplitViewController {
     override func willShowingViewControllerPushWithSender(_ sender: AnyObject?) -> Bool {
         // Split View Controllers never push for `showViewController(_:sender:)`.
@@ -65,4 +73,4 @@ extension UISplitViewController {
         // Otherwise, we don't push for `showDetailViewController(_:sender:)`.
         return false
     }
-}
+}*/

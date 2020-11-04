@@ -40,7 +40,9 @@ class ConversationViewController: UITableViewController {
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: ConversationViewController.cellIdentifier)
         
+        /*
         NotificationCenter.default.addObserver(self, selector: #selector(ConversationViewController.showDetailTargetDidChange(_:)), name: NSNotification.Name.UIViewControllerShowDetailTargetDidChange, object: nil)
+ */
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,9 +69,11 @@ class ConversationViewController: UITableViewController {
     }
     
     // This method is originally declared in the PhotoContents extension on `UIViewController`.
+    /*
     override func containsPhoto(_ photo: Photo) -> Bool {
         return conversation.photos.contains(photo)
     }
+ */
     
     func showDetailTargetDidChange(_ notification: Notification) {
         for cell in tableView.visibleCells {
